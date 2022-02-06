@@ -14,4 +14,21 @@ const get_albumes = async () => {
     }
   };
   
+  //#5
+  resolver3ss = ()=> {
+    return new Promise(resolve => {
+      setTimeout(() => {
+        resolve('Información enviada');
+      }, 3000);
+    });
+  }
+
+  //#6
+  async function asyncCall() {
+    const resultado = await resolver3ss();
+    const resultado2 = await get_albumes();
+    console.log(resultado, resultado2);
+  }
+  
+  asyncCall();
   get_albumes();
